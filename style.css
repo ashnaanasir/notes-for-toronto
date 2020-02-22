@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/Background1.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -10px;
+    font-size: 62.5%;
+}
+
+div.main {
+    width: 90%;
+    /* height: auto;   */ 
+    min-height: 90vh; /*remove this when done with the web*/ 
+    background-color: rgba(219, 219, 219, 0.37);
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: .6rem;
+}
