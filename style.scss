@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/patrick-tomasso-3OdGZzTt1fM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -10px;
+    background-attachment: fixed;
+    font-size: 62.5%;
+    /* font-family: "Shadows Into Light", sans-serif; */
+}
+
+div.main {
+    width: 90%;
+    /* height: auto;   */
+    min-height: 90vh;
+    /*remove this when done with the website*/
+    background-color: rgba(219, 219, 219, 0.37);
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: .5rem;
+
+    & div#header-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        & div.logo-wrapper {
+            display: flex;
+            margin-left: 1rem;
+
+            & h1.heading {
+                font-family: "Annie Use Your Telescope", sans-serif;
+                font-size: 2rem;
+                margin-right: .5rem;
+                color: rgb(129, 128, 128);
+            }
+
+            & img.logo-img{
+                height: 3.5rem;
+                margin-top: .5rem;
+                fill: rgb(23, 87, 135);
+            }
+        }
+
+        & div.time-weather-wrapper{
+            background-color: rgba(0, 0, 0, 0.308);
+            padding: 1rem;
+            margin: 1rem 1rem 0 0;
+            border-radius: .2rem;
+            color: rgb(255, 255, 255);
+
+            & h3.tw-heading{
+                font-size: 1rem;
+                margin: 0;
+
+                & span.tw{
+                    font-size: 1.5rem;
+                    color: rgb(23, 87, 135);
+                }
+            }
+
+        }
+    }
+
+    & div#notes-wrapper {
+        margin-top: 3rem;
+        display: flex;
+        flex-flow: wrap;
+        padding: .5rem;
+        font-family: "Gochi Hand", sans-serif;
+        font-size: 1.2rem;
+        color: #000;
+
+
+        & div.note-box{
+            width: 25rem;
+            padding: 1rem;
+            background-color: rgba(188, 143, 143, 0.815);
+            margin: 1rem;
+
+            & p.note-from {
+                text-align: right;
+            }
+            
+        }
+    }
+
+}
+
+
