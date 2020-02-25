@@ -74,11 +74,14 @@ let noteForm = document.getElementById('notes-form');
 
 noteForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    console.log(e);
-    let notefrom = e.path[0].elements[0].value;
-    let notetitle = e.path[0].elements[1].value;
-    let notebody = e.path[0].elements[2].value;
-    console.log(notefrom, notetitle, notebody);
+    
+    // at local host, the [0]element is the note-from value.
+    //at netlify, the element[0] is just a form wrapper. 
+    // when publishing and being used on netlify, the elements[x] is pushed to x+1
+    let notefrom = e.path[0].elements[1].value;
+    let notetitle = e.path[0].elements[2].value;
+    let notebody = e.path[0].elements[3].value;
+    
     let newNote = {
         title: notetitle,
         from: notefrom,
