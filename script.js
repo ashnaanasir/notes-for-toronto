@@ -31,6 +31,47 @@ function setWeather() {
     setTimeout(setWeather, 120000); //to check for weather update evry two minute
 }
 
-//getting and setting weather and time
+//fetching notes and rendering them on screen.
+
+let notes = [   //array of objects to store current notes
+    {   
+        title: 'first note',
+        from: 'Misha',
+        bodytext: 'Omg I love toronto so much you have no idea i went to yonge str and it was so good super amazing and my ftaher loved it too.',
+        imgs: ''
+    }, 
+    {
+        title: 'second note',
+        from: 'Martha',
+        bodytext: 'So I was puttig it off foreverLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad non vero ipsa! Repellendus        asperiores est voluptatum provident beatae voluptates quod quibusdam delectus repudiandae maior cupiditate eligendi!',
+        img: ''
+    }
+];
+
+function renderNotes() {
+    let noteWrapper = document.getElementById('notes-wrapper');
+    let noteslist = '';
+
+    notes.forEach((note) => {
+        noteslist += `<div class="note-box">
+                <p class="note-title">
+                    ${note.title}
+                </p>
+                <p class="note-text">
+                    ${note.bodytext}
+                </p>
+                <p class="note-from">
+                    ${note.from}
+                </p>
+            </div>`
+    });
+
+    noteWrapper.innerHTML = noteslist;
+}
+
+//getting and setting weather and time when page loads
 window.onload = setTime();
 window.onload = setWeather();
+window.onload = renderNotes();
+
+

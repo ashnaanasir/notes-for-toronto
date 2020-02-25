@@ -19,12 +19,14 @@ body {
 
 div.main {
   width: 90%;
-  /* height: auto;   */
+  height: auto;
   min-height: 90vh;
   /*remove this when done with the website*/
   background-color: rgba(219, 219, 219, 0.37);
   margin: 0 auto;
   margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
   border-radius: .5rem;
 }
 
@@ -90,6 +92,7 @@ div.main div#notes-wrapper {
 
 div.main div#notes-wrapper div.note-box {
   width: 25rem;
+  height: auto;
   padding: 1rem;
   background-color: rgba(188, 143, 143, 0.815);
   margin: 1rem;
@@ -97,5 +100,34 @@ div.main div#notes-wrapper div.note-box {
 
 div.main div#notes-wrapper div.note-box p.note-from {
   text-align: right;
+}
+
+div.main div#form-wrapper {
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  padding: 2rem 5rem;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  background: #fff;
+}
+
+footer {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+}
+
+footer p.footer-text {
+  margin: 0;
+}
+
+footer p.footer-text a {
+  text-decoration: none;
+  color: #175787;
 }
 /*# sourceMappingURL=style.css.map */
