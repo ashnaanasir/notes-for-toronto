@@ -70,40 +70,117 @@ div.main {
         }
     }
 
-    & div#notes-wrapper {
-        margin-top: 3rem;
-        display: flex;
-        flex-flow: wrap;
-        padding: .5rem;
-        font-family: "Gochi Hand", sans-serif;
-        font-size: 1.2rem;
-        color: #000;
+    & div#content-wrapper{
 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
 
-        & div.note-box{
-            width: 25rem;
-            height: auto;
-            padding: 1rem;
-            background-color: rgba(188, 143, 143, 0.815);
-            margin: 1rem;
-
-            & p.note-from {
-                text-align: right;
+        & div#notes-wrapper {
+            grid-column: 1/4;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+            padding: .5rem;
+            font-family: "Gochi Hand", sans-serif;
+            font-size: 1.2rem;
+            color: #000;
+    
+    
+            & div.note-box{
+                width: 1fr;
+                max-width: 24rem;
+                height: auto;
+                padding: 1rem;
+                background-color: rgba(188, 143, 143, 0.815);
+                margin: 1rem;
+    
+                & p.note-from {
+                    text-align: right;
+                }
+                
             }
-            
         }
-    }
-
-    & div#form-wrapper {
-        margin: 0 auto;
-        margin-top: 10rem;
-        margin-bottom: 2rem;
-        padding: 2rem 5rem;
-        width: 90%;
-        height: auto;
-        text-align: center;
-        background: #fff;
         
+        & div#feed-wrapper {
+            & div#twitter-feed{
+                margin-top: 1.35rem;
+            }
+        }
+
+        & div#form-wrapper {
+            grid-column: 1/-1;
+            margin: 0 auto;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            padding: 2rem 5rem;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            background: #fff;
+    
+            & div.form-heading h3{
+                font-size: 1.8rem;
+                font-family: 'Annie Use Your Telescope', sans-serif;
+                color: rgb(23, 87, 135);
+                text-transform: capitalize;
+            }
+    
+            & div.note-form{
+                & form#notes-form{
+                    & div.input{
+                        & label {
+                            font-family: "Annie Use Your Telescope", sans-serif;
+                            font-size: 1.6rem;
+                            color: rgb(23, 87, 135);
+                        }
+                        & input {
+                            width: 30rem;
+                            border-color: rgb(23, 87, 135);
+                            border: .2rem solid rgba(23, 86, 135, 0.637);
+                            padding: .5rem;
+                            margin-bottom: .5rem;
+                            border-radius: .5rem;
+                            outline: none;
+                        }
+                        & input#note-title{
+                            margin-left: 7px;
+                        }
+
+                        & textarea{
+                              width: 30rem;
+                              border-color: rgb(23, 87, 135);
+                              border: 2px solid rgba(23, 86, 135, 0.637);
+                              padding: 5px;
+                              margin-top: 5px;
+                              margin-left: 12px;
+                              border-radius: 5px;
+                              outline: none;
+                              vertical-align: middle;
+                              font-family: "Gochi Hand", sans-serif;
+                              font-size: 1.1rem;
+                              color: rgb(23, 87, 135);
+                        }
+
+                        
+                    }
+
+                    & input#submit{
+                        border: none;
+                        outline: none;
+                        margin-top: 1rem;
+                        margin-left: 7rem;
+                        color: #fff;
+                        background-color: rgb(23, 87, 135);
+                        padding: .8rem 5rem;
+                    }
+                    
+                }
+            }
+    
+        }
+
     }
 
 }

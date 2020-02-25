@@ -12,7 +12,6 @@
 </head>
 <body>
     <div class="main">
-
         <!-- headr with logo and time/weather -->
         <div id="header-wrapper">            
             <!-- logo and title -->
@@ -39,57 +38,75 @@
             </div>
         </div>
 
-        <!-- notes display area -->
-        <div id="notes-wrapper">
-            <div class="note-box">
-                <p class="note-title">
-                    Sample Note
-                </p>
-                <p class="note-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad non vero ipsa! Repellendus
-                    asperiores est voluptatum provident beatae voluptates quod quibusdam delectus repudiandae maiores
-                    cupiditate eligendi!
-                </p>
-                <p class="note-from">
-                    Misha
-                </p>
-            </div>
-        </div>
+        <div id="content-wrapper">
 
-        <!-- newsfeed+twitterfeed+meetup/events feed {make it later}-->
-        <!-- <div id="feed-wrapper">
-        </div> -->
-
-        <!-- form to submit note -->
-        <div id="form-wrapper">
-            <div class="form-heading">
-                <h3>send a note to toronto!</h3>
+            <!-- notes display area -->
+            <div id="notes-wrapper">
+                <div class="note-box">
+                    <p class="note-title">
+                        Sample Note
+                    </p>
+                    <p class="note-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad non vero ipsa! Repellendus
+                        asperiores est voluptatum provident beatae voluptates quod quibusdam delectus repudiandae maiores
+                        cupiditate eligendi!
+                    </p>
+                    <p class="note-from">
+                        Misha
+                    </p>
+                </div>
             </div>
-            <div class="note-form">
-                <form action="" id="note-submit-form" data-netlify="true" data-netlify-recaptcha="true">
-                    <div class="form-input">
-                        <label for="from">Your name</label>
-                        <input type="text" name="from" value="" placeholder="Your Name:">
+
+            <!-- newsfeed+twitterfeed+meetup/events feed-->
+            <!-- API call :
+            https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.thestar.com%2Fcontent%2Fthestar%2Ffeed.RSSManagerServlet.articles.yourtoronto.rss  - feed from toronto star about toronto. really mild stuff. need an api call to convert it to json.--> 
+            <div id="feed-wrapper">
+                <div id="twitter-feed">
+                    <a class="twitter-timeline" data-width="320" data-height="400" data-theme="light"
+                        href="https://twitter.com/blogTO?ref_src=twsrc%5Etfw">Tweets by blogTO</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <div id="news-feed">
+
+                </div>
+
+                <div id="meetup-feed">
+
+                </div>
+                
+                
+            </div>
+            <!-- form to submit note -->
+            <div id="form-wrapper">
+                <div class="form-heading">
+                    <h3>send a note to toronto!</h3>
+                </div>
+                
+                <div class="note-form">
+                    <form id="notes-form">
+                    <div class="input">
+                        <label for="from">Your Name: </label>
+                        <input type="text" name="from" id="note-from" placeholder="Your name">
                     </div>
                     
-                    <div class="form-input">
-                        <label for="title">Note Title</label>
-                        <input type="text" name="title" value="" placeholder="Give your note a title">
+                    <div class="input">
+                        <label for="title">Note Title:   </label>
+                        <input type="text" name="title" id="note-title" placeholder="Note Title">
                     </div>
 
-                    <div class="form-input">
-                        <label for="bodytext">Your Note</label>
-                        <textarea name="bodytext" id="notebody" cols="30" rows="10"></textarea>
+                    <div class="input">
+                        <label for="note-body">Your Note</label>
+                        <textarea name="note-body" id="note-body" cols="30" rows="10"></textarea>
                     </div>
-                     </p>
-                     <div data-netlify-recaptcha="true"></div>
-                     <p>
-                    <input type="submit">
-                </form>
+
+                    
+                        <input type="submit" id="submit">
+                    
+                    </form>
+                </div>
             </div>
-
         </div>
-
     </div>
 
     <footer>

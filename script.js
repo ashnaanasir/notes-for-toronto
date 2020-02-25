@@ -39,12 +39,6 @@ let notes = [   //array of objects to store current notes
         from: 'Misha',
         bodytext: 'Omg I love toronto so much you have no idea i went to yonge str and it was so good super amazing and my ftaher loved it too.',
         imgs: ''
-    }, 
-    {
-        title: 'second note',
-        from: 'Martha',
-        bodytext: 'So I was puttig it off foreverLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad non vero ipsa! Repellendus        asperiores est voluptatum provident beatae voluptates quod quibusdam delectus repudiandae maior cupiditate eligendi!',
-        img: ''
     }
 ];
 
@@ -74,4 +68,25 @@ window.onload = setTime();
 window.onload = setWeather();
 window.onload = renderNotes();
 
+// adding notes:
+
+let noteForm = document.getElementById('notes-form');
+
+noteForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let notefrom = e.path[0].elements[0].value;
+    let notetitle = e.path[0].elements[1].value;
+    let notebody = e.path[0].elements[2].value;
+
+    let newNote = {
+        title: notetitle,
+        from: notefrom,
+        bodytext: notebody 
+    }
+    
+    notes.push(newNote);
+    renderNotes();
+    noteForm.reset();
+    
+})
 
