@@ -77,7 +77,7 @@ noteForm.addEventListener('submit', function(e) {
     let notefrom = e.path[0].elements[0].value;
     let notetitle = e.path[0].elements[1].value;
     let notebody = e.path[0].elements[2].value;
-
+    console.log(notefrom, notetitle, notebody);
     let newNote = {
         title: notetitle,
         from: notefrom,
