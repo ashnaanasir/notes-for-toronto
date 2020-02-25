@@ -3,7 +3,7 @@
 let timeholder = document.getElementById('time');
 function setTime() {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://worldtimeapi.org/api/timezone/America/Toronto", true);
+    xhr.open("GET", "https://worldtimeapi.org/api/timezone/America/Toronto", true);
     xhr.onload = () => {
         let timearr = ((JSON.parse(xhr.response)).datetime).split("");
         let timehr = (timearr.slice(11, 13)).join("");
@@ -17,7 +17,7 @@ function setTime() {
 
 
 //fetching current temperature from openweathermap api
-const OPEN_WEATHER_API_CALL = "http://api.openweathermap.org/data/2.5/weather?q=toronto&appid=890236356f7a8c5630730c0c67cb5b0f";
+const OPEN_WEATHER_API_CALL = "https://api.openweathermap.org/data/2.5/weather?q=toronto&appid=890236356f7a8c5630730c0c67cb5b0f";
 let weatherHolder = document.getElementById('weather');
 function setWeather() {
     const xhr = new XMLHttpRequest();
