@@ -39,6 +39,54 @@ let notes = [   //array of objects to store current notes
         from: 'Misha',
         bodytext: 'Omg I love toronto so much you have no idea i went to yonge str and it was so good super amazing and my ftaher loved it too.',
         imgs: ''
+    },
+    {
+        title: 'Toronto is the best',
+        from: 'dynamitehacker',
+        bodytext: 'I grew up in a suburb of Toronto, then moved to Waterloo, Montreal, Calgary, and then back to Toronto, but downtown this time. Ive also visited plenty of cities in North America and Europe.I live here because I consider it to be the best place to live in North America.',
+        imgs: ''
+    },
+    {
+        title: 'Good outdoor space',
+        from: 'jeffprobst',
+        bodytext: 'I would actually say there is a reasonable amount of outdoor space for a big urban city. You have the whole done valley system as well as high park and the waterfront. If you go out of downtown a bit further you have rouge park, which is pretty big as well.',
+        imgs: ''
+    },
+    {
+        title: 'Rush hour sucks',
+        from: 'Astramar',
+        bodytext: 'During rush hour people on the TTC arent at their best, but to be honest, I m not either when I just got out of class and have been standing all day Im not cheerful to be stuck on a crowded subway car.',
+        imgs: ''
+    },
+    {
+        title: 'Love living in Toronto',
+        from: 'Apostrotastrophe',
+        bodytext: 'I moved here from Hamilton about a year and a half ago, and even now I have days where I get off the streetcar and think "this is where I live" with a crazy sense of awe. I \'m right at College and Bathurst, "Little Italy", and it\'s my favourite area in the whole city - I lucked out so hard getting this place.',
+        imgs: ''
+    },
+    {
+        title: 'Hmm, not sure.',
+        from: 'Unknown',
+        bodytext: 'It really depends on what you like to do and what your pace of life is. Personally, I hate the city. Not Toronto, but I mean city. I do not like hustle and bustle. I don\'t like built - up places.I like trees and fields and open spaces.I like quiet and slow.',
+        imgs: ''
+    },
+    {
+        title: 'Best of everything',
+        from: 'Frostbite',
+        bodytext: 'I love Toronto but it also lacks alot of the old big city charm that exists in a lot of the older large us cities, and of course most places in Europe. That being said its a great city but where ever you live its all about what you make of it.',
+        imgs: ''
+    },
+    {
+        title: 'Toronto is home',
+        from: 'Someone',
+        bodytext: 'I have lived here since I was 10 years old, so yes, I love the hell out of this city, and the province that it is located in. The best thing about Toronto is the ever visible multiculturalism (China Town, Greek Town, Korea Town, Little Italy, etc), booming entertainment district, great access to public transportation, the schools, and so on.',
+        imgs: ''
+    },
+    {
+        title: 'Love this place!',
+        from: 'Noname',
+        bodytext: 'I could choose to live anywhere in the world, and I choose to live in Toronto. Sure, it\'s not perfect - but where could be ? It \'s got the ideal mix of culture, food, attractions, diversity and all around has the greatest fucking vibe of any city Ive ever been to. \n The people who will hate Toronto are the people whose first - world problems rule their lives.This city owns.',
+        imgs: ''
     }
 ];
 
@@ -71,8 +119,8 @@ window.onload = renderNotes();
 // adding notes:
 
 let noteForm = document.getElementById('notes-form');
-
-noteForm.addEventListener('submit', function(e) {
+// this function will be removed when netlify form is figured out.
+noteForm.addEventListener('submit', function(e) { 
     e.preventDefault(); //to get the form submission in netlify forms, I need to remove the prevent default function.
 
 
