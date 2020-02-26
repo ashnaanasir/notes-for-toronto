@@ -19,7 +19,7 @@ Creating a page where you can view and post notes about what Toronto means to yo
 - [ ] newsfeed with link to news/stories about toronto(?)
 
 ##### Update (25/02)
-- So I managed to put the barebones version of website up. And managed to finish all the features I wanted to implement initially. Here is what I want to do next:
+So I managed to put the barebones version of website up. And managed to finish all the features I wanted to implement initially. Here is what I want to do next:
 
 - [ ] figure out an alternative to Masonry to remove vertical space between notes of varying heights.
 - [ ] add rss feed from toronto star converted to JSON
